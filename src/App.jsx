@@ -3,7 +3,8 @@ import Homepage from "./pages/Homepage"
 import AppLayout from "./pages/AppLayout"
 import Product from "./pages/Product"
 import PageNotFound from "./pages/PageNotFound"
-import PageNav from "./components/pageNav"
+import Login from "./pages/Login"
+import Pricing from "./pages/Pricing"
 
 function App() {
  
@@ -13,7 +14,9 @@ function App() {
     
     <BrowserRouter>
       <Routes>
-        <Route path="product" element={<Product></Product>}></Route>
+        <Route path="/Login" element={<Login></Login>}></Route>
+        <Route path="/product" element={<Product></Product>}></Route>
+        <Route path="/Pricing" element={<Pricing></Pricing>}></Route>
         <Route path="/" element={<Homepage></Homepage>}></Route>
         <Route path="/app" element={<AppLayout></AppLayout>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
